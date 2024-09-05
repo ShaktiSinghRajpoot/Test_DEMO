@@ -12,9 +12,10 @@
 <div class="row">
     <div class="col">
         <div class="panel-hdr">
-            <h2>
+            <h1> 
+
                 Table <span class="fw-300"><i>Bordered</i></span>
-            </h2>
+            </h1>
             <div class="panel-toolbar">
                 <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
                 <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
@@ -27,7 +28,7 @@
                 <div class="panel-content p-2">
                     <!-- First Table -->
                     <div id="dataList">
-                        <table id="dt_attendance" class="table table-bordered table-sm table-hover table-striped nowrap compact">
+                        <table id="dt_WorkingReport" class="table table-bordered table-sm table-hover table-striped nowrap compact">
                             <thead class="bg-primary-800" style="position:sticky;top:0; width:100%;">
                                 <tr>
                                     <th>#</th>
@@ -82,8 +83,8 @@
 
             GetWorkReportData();
             var heightwindow = $(document).height() - 400;
-            $('#dt_attendance,#dt_EmpAttendance').css('max-height', heightwindow + 'px');
-            $('#dt_attendance,#dt_EmpAttendance').css('min-height', heightwindow + 'px');
+            $('#dt_WorkingReport,#dt_EmpAttendance').css('max-height', heightwindow + 'px');
+            $('#dt_WorkingReport,#dt_EmpAttendance').css('min-height', heightwindow + 'px');
         });
 
         function GetWorkReportData() {
@@ -97,7 +98,7 @@
                     debugger;
                     var row;
                     var count=1;
-                    $("#dt_attendance tbody").empty();
+                    $("#dt_WorkingReport tbody").empty();
                     $.each(data, function (index, item) {
                         row += '<tr">';
                         row += '<td >' + count + '</td>';
@@ -110,7 +111,7 @@
                         row += "</tr>";
                         count++;
                     });
-                    $('#dt_attendance tbody').html(row);
+                    $('#dt_WorkingReport tbody').html(row);
                 }
             });
         }

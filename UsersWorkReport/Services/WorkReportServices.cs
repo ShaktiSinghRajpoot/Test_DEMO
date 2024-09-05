@@ -25,7 +25,6 @@ namespace UsersWorkReport.Services
           
             List<WorkReport> workReports = new List<WorkReport>();
             //WorkReport objs=new WorkReport();
-
             //objs.WorkingDate = "10-Jul-2001";
             //objs.ScreenName = "Test";
             //objs.SideMenu = "SideTest";
@@ -41,7 +40,7 @@ namespace UsersWorkReport.Services
             //workReports.Add(objs);
             try
             {
-
+                var conss = "";
 
                 SqlConnection con = new SqlConnection(_connection);
                 {
