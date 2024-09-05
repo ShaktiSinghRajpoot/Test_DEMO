@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="DC_FactsheetReportStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="report-background">
+        <h2 class="report-heading"><b>FACT SHEET</b></h2>
+        <table class="report-maintable" cellpadding="8" cellspacing="0">
+            <tr>
+                <th>Date</th>
+                <td>{OpeningDate}</td>
+            </tr>
+            <tr>
+                <th>Our Ref No</th>
+                <td>{RefNo} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Client Ref No <i>&nbsp;&nbsp;{ClientRefNo}</i></strong></td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>{Symbol} <span>{Amount}</span> </td>
+            </tr>
+            <tr>
+                <th valign="top">Creditor</th>
+                <td>
+                    {CRPartyName}
+                    <br />
+                    {CRAddress}
+                </td>
+            </tr>
+            <tr>
+                <th valign="top" style="border-bottom: 0px;">Debtor</th>
+                <td style="border-bottom: 0px ">{DBPartyName} <br /> {DBAddress}</td>
+            </tr>
+            <tr>
+                <th style="border-top: 0px; border-bottom: 0px">Phone No</th>
+                <td style="border-top: 0px; border-bottom: 0px">{DBPhoneNo}</td>
+            </tr>
+            <tr>
+                <th style="border-top: 0px;">Alternate Address</th>
+                <td style="border-top: 0px;">{DBAlternateAddress}</td>
+            </tr>
+            <tr>
+                <th valign="top">Contacts</th>
+                <td>
+                    <table width="100%" class="noborderTable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                        </tr>
+                        <tr>
+                            <td>{CP1Name}</td>
+                            <td>{CP1Phone}</td>
+                            <td>{CP1Mobile}</td>
+                            <td>{CP1Email}</td>
+                        </tr>
+                        <tr>
+                            <td>{CP2Name}</td>
+                            <td>{CP2Phone}</td>
+                            <td>{CP2Mobile}</td>
+                            <td>{CP2Email}</td>
+                        </tr>
+                        <tr>
+                            <td>{CP3Name}</td>
+                            <td>{CP3Phone}</td>
+                            <td>{CP3Mobile}</td>
+                            <td>{CP3Email}</td>
+                        </tr>
+                        <tr>
+                            <td>{CP4Name}</td>
+                            <td>{CP4Phone}</td>
+                            <td>{CP4Mobile}</td>
+                            <td>{CP4Email}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>Fax & Email</th>
+                <td>{Fax} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{Email}</span></td>
+            </tr>
+            <tr>
+                <th valign="top">Type of Goods</th>
+                <td>{TypeofGoods}</td>
+            </tr>
+            <tr>
+                <th valign="top">Payment Terms</th>
+                <td>{PaymentTerms}</td>
+            </tr>
+            <tr>
+                <th valign="top">Documents attached</th>
+                <td>
+                    <ul style="list-style-type:disc;">
+                        {lilist}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th valign="top">LC Details</th>
+                <td>
+                    {BB}
+                    {AB}
+                </td>
+            </tr>
+            <tr>
+                <th valign="top">Comments</th>
+                <td>{Comments}</td>
+            </tr>
+            <tr>
+                <th valign="top" style="width:100px!important">Observations</th>
+                <td>{Observations}</td>
+            </tr>
+        </table>
+        <div style="float:left">
+            {INV}
+        </div>
+    </div>
+</body>
+</html>

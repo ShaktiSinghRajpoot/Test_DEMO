@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="/dc/template/invoiceStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <table style="width:100%">
+        <tbody>
+            <tr><td style="min-height:100px;max-height:100px;min-width:100px;max-width:100px;"></td></tr>
+        </tbody>
+    </table>
+    <table style="width:100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img src="ucs.jpg" style="min-height:100px;max-height:100px;min-width:100px;max-width:100px;" />
+                </td>
+            </tr>
+            <tr>
+                <td><b>{TaxInvoice}</b></td>
+            </tr>
+            <tr>
+                <td><b>GSTIN No: {GSTINNo}</b></td>
+            </tr>
+            <tr>
+                <td><b>PAN No: {PanNo}</b>  </td>
+            </tr>
+            <tr>
+                <td><b>Invoice No.:{InvoiceNowithPrefix}</b></td>
+            </tr>
+            <tr>
+                <td><b>Date: {InvoiceDate}</b></td>
+            </tr>
+            <tr>
+                <td><b>IRN: {IRNNO}</b></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br />
+    </div>
+    <table style="border:2px solid black;width:100%;padding:5px">
+        <tbody>
+            <tr>
+                <td style="padding-left: 20px;padding-top:5px"><strong>To,</strong></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px;"><span>{ContactPerson}</span></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px;">{ClientName}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px;">{ClientAddress}</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px;">
+                    {ClientState}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px;">
+                    {ClientCountry}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table style="border:2px solid black;width:100%;margin-top:5px;" cellpadding="4">
+        <thead>
+            <tr>
+                <th style="padding: 5px;border-bottom: 1px solid black; width: 40%;">Matter</th>
+                <th style="padding: 5px;border-bottom: 1px solid black; width: 20%;">Amt. Collected</th>
+                <th style="padding: 5px; border-bottom: 1px solid black; width: 20%; text-align: right">Cont. Fee</th>
+                <th style="padding: 5px;border-bottom: 1px solid black; width: 20%; text-align:right">Amount({Currency})</th>
+            </tr>
+        </thead>
+        <tbody>
+            {tbodydata}
+        </tbody>
+    </table>
+    <table style="border:3px solid black;width:100%;margin-top:5px;" cellpadding="4">
+        <thead>
+            <tr>
+                <th style="padding: 5px; border-bottom: 1px solid black; text-align: center; width: 80%;">Net Payable </th>
+                <th style="padding: 5px;border-bottom: 1px solid black; width: 20%;text-align:right">{Netpayable}</th>
+            </tr>
+        </thead>
+    </table>
+    <div>
+        <br />
+    </div>
+
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="left" colspan="2"><u style="font-weight:bold;margin-bottom:1px;"><i>Please pay to the following bank account :</i></u></td>
+            </tr>
+            <tr>
+                <td align="left" width="25%"><u style="font-weight:bold;margin-bottom:1px;"><i>Banking Details:</i></u></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="left">Our Bankers</td>
+                <td>{BankName}</td>
+            </tr>
+            <tr>
+                <td align="left">Branch</td>
+                <td>{Branch}</td>
+            </tr>
+            <tr>
+                <td align="left">Account Name</td>
+                <td>{AccountName}</td>
+            </tr>
+            <tr>
+                <td align="left">Account Number</td>
+                <td>{AccountNumber}</td>
+            </tr>
+            <tr>
+                <td align="left">Swift Code</td>
+                <td>{SwiftCode}</td>
+            </tr>
+            <tr>
+                <td align="left">NEFT/IFSC Code</td>
+                <td>{NiftIFSCCode}</td>
+            </tr>
+            <tr>
+                <td align="left">Payment Terms</td>
+                <td>{PaymentTerms}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <br />
+    </div>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="left">{BAS}</td>
+            </tr>
+            <tr>
+                <td align="left">{LUT}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br />
+    </div>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="left">
+                    If you have any questions pertaining to this invoice, please call: {PhoneNo} or Fax: {FaxNo} or E-Mail: {Email}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br />
+    </div>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    This is a computer generated credit note, hence no signature required
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <br />
+    </div>
+</body>
+</html>

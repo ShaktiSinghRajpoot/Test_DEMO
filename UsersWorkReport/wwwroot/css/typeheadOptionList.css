@@ -1,0 +1,32 @@
+﻿.btn-group {
+    text-align: left !important;
+    height: 30px !important;
+    width: 100% !important;
+}
+
+    .btn-group button {
+        text-align: left !important;
+    }
+
+.dropdown-item-client:hover {
+    border: 1px solid #ccc !important;
+    color: #000 !important;
+    background: #e4e4e4 !important;
+}
+
+.dropdown-item-client {
+    border: 1px solid #fff !important;
+    border-radius: 4px !important;
+    padding: .40rem .50rem !important;
+}
+
+.dropdown-item-client1 {
+    border-radius: 8px !important;
+    border: 1px solid #fff !important;
+    color: #000 !important;
+    background: #e4e4e4 !important;
+}
+
+.dropdown-menu-client {
+    padding: 5px !important;
+}

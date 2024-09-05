@@ -1,0 +1,43 @@
+﻿.fix-height-fs {
+    height: calc(0.5rem + 1rem + 0px) !important;
+    padding: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.fix-height-fs1 {
+    height: calc(0.3rem + 1rem + 0px) !important;
+    padding: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.tableFixHead {
+    overflow-y: auto;
+    height: 87px;
+    width: 100% !important;
+}
+
+    .tableFixHead thead th {
+        position: sticky;
+        top: -1px;
+        background: #edf2f9;
+        padding-left: 4px !important;
+    }
+
+.tablethpl thead th {
+    padding-left: 4px !important;
+}
+
+.tabletrpl tbody td {
+    padding-left: 4px !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+    border: 1px solid #6c757d;
+}

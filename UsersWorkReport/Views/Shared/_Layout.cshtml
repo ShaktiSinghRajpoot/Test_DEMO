@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="root-text-sm">
+<head>
+    <partial name="_Head" />
+    @RenderSection("HeadBlock", required: false)
+</head>
+<body class="mod-bg-1 mod-nav-link nav-function-hidden _themecolor">
+    <div class="page-wrapper">
+        <div class="page-inner">
+            <aside class="page-sidebar list-filter-active">
+                <div class="page-logo" style="background:none;">
+                    @*<a href="@Url.Action("Dashboard", "Home", new { Area = "" })" class="page-logo-link press-scale-down d-flex align-items-center position-relative">
+                        <img src="img/logo.png" alt="Unified Credit Solutions" aria-roledescription="logo">
+                        <span class="page-logo-text mr-1 fw-400">Unified Credit Solutions</span>
+                        <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
+                    </a>*@
+                </div>
+               @* @await Component.InvokeAsync("MenuComponent")*@
+                <div class="nav-footer shadow-top">
+                    <ul class="list-table m-auto nav-footer-buttons text-muted">
+                        <li>
+                            <span style="color: antiquewhite;">For Best View : 1600 ☓ 900</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="page-content-wrapper">
+                <header class="page-header" role="banner">
+                    <div class="page-logo">
+                        <a href="#" class="page-logo-link press-scale-down d-flex align-items-center position-relative" data-toggle="modal" data-target="#modal-shortcut">
+                            <img src="img/logo.png" alt="Unified Credit Solutions" aria-roledescription="logo">
+                            <span class="page-logo-text mr-1"></span>
+                            <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
+                            <i class="fal fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
+                        </a>
+                    </div>
+                    <div class="hidden-md-down dropdown-icon-menu position-relative">
+                        <a href="javascript:void(0);" class="header-btn btn js-waves-off" data-action="toggle" data-class="nav-function-hidden" title="Hide Navigation">
+                            <i class="ni ni-menu"></i>
+                        </a>
+                    </div>
+                    <div class="hidden-lg-up">
+                        <a href="#" class="header-btn btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
+                            <i class="ni ni-menu"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <span class="text-secondary h3">Common</span>
+                        <ol class="breadcrumb page-breadcrumb mb-0 font-italic">
+                            @if (string.IsNullOrEmpty(ViewBag.Category2))
+                            {
+                                <li class="breadcrumb-item" style="overflow:unset"><a href="javascript:void(0);">@ViewBag.Category1</a></li>
+                            }
+                            else
+                            {
+                                <li class="breadcrumb-item" style="overflow:unset"><a href="javascript:void(0);">@ViewBag.Category1</a></li>
+                                <li class="breadcrumb-item" style="overflow:unset">@ViewBag.Category2</li>
+                            }
+                        </ol>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        @*@await Component.InvokeAsync("DropdownModuleComponent")
+                        <partial name="_DropdownProfile" />*@
+                    </div>
+                </header>
+                <main id="js-page-content" role="main" class="page-content">
+                    @RenderBody()
+                </main>
+                <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
+                <partial name="_ColorProfileReference" />
+            </div>
+        </div>
+    </div>
+    <partial name="_ScriptsBasePlugins" />
+    <partial name="_ScriptsBasePluginsLayout" />
+    <partial name="_ChangeTheme" />
+    @RenderSection("ScriptsBlock", required: false)
+</body>
+</html>

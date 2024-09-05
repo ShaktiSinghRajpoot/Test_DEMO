@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="creditNoteStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <table style="width:100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img src="/img/ucs.jpg" style="min-height:100px;max-height:100px;min-width:100px;max-width:100px;" />
+                </td>
+            </tr>
+            <tr>
+                <td><u style="font-weight:bold;margin-bottom:1px;"><i>CREDIT NOTE <br /><br /> </i></u></td>
+            </tr>
+            <tr>
+                <td>{CreditNoteNo}</td>
+            </tr>
+            <tr>
+                <td>Date: {Date}</td>
+            </tr>
+            <tr>
+                <td>PAN: {Pan}</td>
+            </tr>
+            <tr>
+                <td>
+                    GSTIN: {GstinNo}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br /><br />
+    </div>
+    <table style="border:2px solid black;width:100%;padding:15px">
+        <tbody>
+            <tr>
+                <td style="padding-top: 20px; padding-left: 20px;"><strong>To,</strong></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px;text-wrap:initial">{ClientAddress}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br />
+    </div>
+    <table style="border:2px solid black;width:100%;" cellpadding="4">
+        <tr>
+            <th align="left" width="50%" class="pl5 bb1">Description</th>
+            <th align="right" width="50%" class="pr5 bb1">Amount ({Currency})</th>
+        </tr>
+        <tr>
+            <td class="pl5" align="left" width="50%">{Description}</td>
+            <td class="pr5" align="right" width="50%">{Amount}</td>
+        </tr>
+        {Taxes}
+        <tr>
+            <td class="pl5" align="left" width="50%">Your Ref:&nbsp;&nbsp;{YourRef}</td>
+            <td class="pr5" align="right" width="50%"></td>
+        </tr>
+        <tr>
+            <td class="pl5" align="left" width="50%">Our Ref:&nbsp;&nbsp;{OurRef}</td>
+            <td class="pr5" align="right" width="50%"></td>
+        </tr>
+        <tr>
+            <td class="pl5 pb0" align="left" width="50%" style="border-top: 1px solid;"><strong>Net Payable</strong></td>
+            <td class="pb0" align="right" width="50%" style="border-top: 1px solid"><strong>{Currency} {NetPayble}</strong></td>
+        </tr>
+        <tr>
+            <td class="pl5 pt0" align="left" colspan="2"><strong>(Amount in Words :</strong> {Currency} {AmountInWord})</td>
+            <td class="pt0" align="right"></td>
+        </tr>
+    </table>
+    <div>
+        <br />
+    </div>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="left">{CreditNoteNo} is issued against Inv. No. {InvoiceNo} dated {Dated}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br />
+    </div>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="left">
+                    If you have any questions pertaining to this invoice, please call: {PhoneNo} or Fax: {FaxNo} or E-Mail: {Email}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <br />
+        <br />
+    </div>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    This is a computer generated credit note, hence no signature required
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

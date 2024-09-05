@@ -1,0 +1,109 @@
+﻿/*Write by Manoj part-1*/
+#dt_searchcase_wrapper .row:nth-child(2) {
+    overflow: auto;
+    max-height: 480px !important;
+}
+
+.btn {
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-btn {
+    border-radius: 7px;
+    padding: 4px 15px !important;
+}
+
+.btn:focus {
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    /*padding: 5px 26px !important;*/
+    border: none;
+    color: #fff;
+    font-size: 0.85rem !important;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.page-header {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+    .page-header.hidden {
+        opacity: 0;
+        display: none;
+    }
+
+/*Write by Manoj part-2*/
+
+@media screen and (min-width: 1500px) and (max-width: 1550px) {
+    #myformSC label {
+        font-size: 0.75rem !important;
+    }
+
+    .fix-height {
+        height: 20px !important;
+        font-size: 0.7rem;
+        padding: 0px 2px !important;
+    }
+
+    .search-btn {
+        box-shadow: none;
+        padding: 2px 5px !important;
+        font-size: 0.72rem !important;
+    }
+
+    .scNewBtn {
+        font-size: 0.65rem;
+        margin: 2px 0px !important;
+    }
+
+    .closure-items > div {
+        margin-right: 2px;
+    }
+
+    .revenue-block-row-others {
+        max-width: 286px !important;
+    }
+
+    .revenue-block-row {
+        max-width: 193px !important;
+    }
+
+    .case-block-row {
+        max-width: 299px !important;
+    }
+
+    .case-block-row1 {
+        max-width: 446px !important;
+    }
+
+    .case-block-row2 {
+        max-width: 226px !important;
+    }
+}
+
+#dt_searchcase_wrapper .dataTables_scrollHead table, .dataTables_scrollBody table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#dt_searchcase_wrapper .dataTables_scrollHead th, dataTables_scrollHead td {
+}
+
+#dt_searchcase_wrapper .dataTables_scrollHead thead th {
+    width: auto;
+    text-decoration: underline;
+}
+
+#dt_searchcase_wrapper .dataTable > thead > tr > th[class*="sort"]:before,
+#dt_searchcase_wrapper .dataTable > thead > tr > th[class*="sort"]:after {
+    content: "" !important;
+}

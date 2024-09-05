@@ -1,0 +1,120 @@
+﻿@font-face {
+    font-family: 'Segoe Pro Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-Regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Segoe Pro Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-Italic.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Segoe Pro Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-Bold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Segoe Pro Bold Italic';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-BoldItalic.woff') format('woff')
+}
+
+/*Table-Style*/
+.table-wrap {
+    min-width: 1200px;
+}
+
+    .table-wrap thead {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+.table-hover tbody tr {
+    transition: background-color .2s ease;
+}
+
+    .table-hover tbody tr:hover {
+        box-shadow: none;
+    }
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #f0f0f0;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #ccc;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.5em;
+    color: #000;
+    font-family: 'Segoe Pro Regular';
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+    color: #000;
+    font-family: 'Segoe Pro Regular';
+}
+
+.table-sm {
+    overflow-y: auto;
+    display: block;
+}
+
+.table-sm-dynamic-datatable {
+    overflow: unset !important
+}
+
+table.table-bordered.dataTable tbody td {
+    font-size: 0.85rem
+}
+
+table.table-bordered.dataTable th {
+    font-weight: 500;
+    font-size: 0.85rem;
+    font-family: 'Segoe Pro Regular';
+}
+
+.table-bordered [class*=" bg-"] td, .table-bordered [class*=" bg-"] th, .table-bordered [class^="bg-"] td, .table-bordered [class^="bg-"] th {
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+.input-group-text, div.dataTables_wrapper div.dataTables_filter input {
+    height: 29px;
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+.input-group input {
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+.table-sm th, .table-sm td {
+    padding: 3px 6px;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    height: 29px;
+    padding-top: 4px;
+}
+
+.mod-skin-dark:not(.mod-skin-light) table.table-bordered.dataTable tbody td {
+    color: #fff;
+}
+
+.mod-skin-dark:not(.mod-skin-light) .btn-link {
+    color: #fff;
+}
+
+.mod-skin-dark:not(.mod-skin-light) div.dataTables_wrapper div.dataTables_info {
+    color: #fff;
+}

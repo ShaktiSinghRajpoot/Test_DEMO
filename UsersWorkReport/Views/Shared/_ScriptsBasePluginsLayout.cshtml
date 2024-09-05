@@ -1,0 +1,75 @@
+﻿@*below code is common for all modules*@
+<script>
+    /*global variable declaration*/
+    var baseUrl = "";
+    if (window.location.hostname == 'localhost') {
+        baseUrl = window.location.origin;
+    }
+    else {
+        baseUrl = window.location.origin + '/ucs';
+    }
+</script>
+<script type="text/javascript">
+    //set active open class in left panel automatically
+    $(function () {
+        var cUrl = this.location.pathname;
+        $('#js-nav-menu li').each(function (i, item) {
+            var menuUrl = item.children[0].pathname;
+            if (menuUrl.toLowerCase() == cUrl.toLowerCase()) {
+                $(this).addClass('active');
+                return false;
+            }
+            else {
+                for (var i = 0; i < item.children.length; i++) {
+                    if (i == 1) {
+                        for (var j = 0; j < item.children[i].getElementsByTagName('a').length; j++) {
+                            var submenuUrl = item.children[i].getElementsByTagName('a')[j].pathname;
+                            if (cUrl.toLowerCase() == submenuUrl.toLowerCase()) {
+                                $(this).addClass('active open');
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    })
+</script>
+<script src="~/js/notifications/sweetalert2/sweetalert2.bundle.js"></script>
+<script src="~/js/notifications/toastr/toastr.js"></script>
+<script type="text/javascript">
+    var _result = '@TempData["Result"]';
+    var _msg = '@TempData["Message"]';
+    $(function () {
+        if (_result == '1') {
+            toastr["success"](_msg, "Success");
+        }
+        if (_result == '0') {
+            Swal.fire("Info!", _msg, "error");
+        }
+    });
+    $(document).on('keydown', function (e) {
+        if ((e.which || e.keyCode) == 81 && e.ctrlKey) {
+            $('#nav_filter_input').focus();
+        }
+    });
+</script>
+<script type="text/javascript">
+    function OpenBIRAnyPage(navigateurl) {
+        var url = '@Url.Action("SaveDynamicURL", "Account", new { area ="" })';
+        $.ajax({
+            url: url,
+            type: "POST",
+            dataType: 'json',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            data: { dynamicurl: navigateurl },
+            success: function (data) {
+                if (data.result.resultCode == "1") {
+                    window.open(data.url, "_blank");
+                }
+                else {
+                    Swal.fire(data.result.resultMessage, "error");
+                }
+            }
+        });
+    }
+</script>

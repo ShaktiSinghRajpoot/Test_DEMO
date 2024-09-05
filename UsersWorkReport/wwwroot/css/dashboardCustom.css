@@ -1,0 +1,272 @@
+﻿@font-face {
+    font-family: 'Segoe Pro Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-Regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Segoe Pro Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-Italic.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Segoe Pro Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-Bold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Segoe Pro Bold Italic';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Segoe UI'),url('../../../webfontsSegoeUI/SegoePro-BoldItalic.woff') format('woff')
+}
+
+.modal-DCClient-Left label, .modal-DCClient-Right label, .customModal label {
+    color: #000;
+    font-size: 0.87rem;
+}
+
+.modal {
+    z-index: 100000;
+}
+
+.mod-bg-1 {
+    padding-right: 0;
+}
+
+.customModal .input-group-text, div.dataTables_wrapper div.dataTables_filter input {
+    height: 29px;
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+.customModal .input-group input {
+    border: 1px solid #000000d1;
+    color: #000000d1;
+}
+
+.customModal .input-group select, .customModal select, .customModal input {
+    border: 1px solid #000000d1;
+    color: #000000d1;
+}
+
+    .customModal .input-group select option {
+        border: 1px solid #000000d1;
+        color: #000000d1;
+    }
+
+.customModal .btn {
+    padding: 2px 16px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+.table-sm-cus th {
+    white-space: nowrap;
+    padding: 3px 6px !important;
+}
+
+.table-sm-cus td {
+    padding: 3px 6px !important;
+}
+
+.table-sm-cus thead .sorting:before, .table-sm-cus thead .sorting_asc:before, .table-sm-cus thead .sorting_desc:before, .table-sm-cus thead .sorting_asc_disabled:before, .table-sm-cus thead .sorting_desc_disabled:before {
+    top: 2px;
+}
+
+.table-sm-cus thead .sorting:after, .table-sm-cus thead .sorting_asc:after, .table-sm-cus thead .sorting_desc:after, .table-sm-cus thead .sorting_asc_disabled:after, .table-sm-cus thead .sorting_desc_disabled:after {
+    top: 2px;
+}
+
+.new-files-wrap {
+    position: relative;
+    border: 1px solid #000;
+}
+
+    .new-files-wrap input {
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #000;
+    }
+
+.customModal .floating-label {
+    position: absolute;
+    top: -9px;
+    background: #fff;
+    padding: 1px 4px;
+}
+
+.new-files table {
+    border-collapse: separate;
+    border-spacing: 8px 4px;
+}
+
+.new-files th {
+    color: #000;
+    text-align: center;
+    font-size: 0.87rem;
+}
+
+.myInModal {
+    position: absolute;
+    background: #fff;
+    padding: 0.2rem 0.9rem;
+    top: 5px;
+    width: 100%;
+    height: 88%;
+}
+
+    .myInModal td {
+        color: #000;
+        white-space: nowrap;
+        border: 1px solid #000;
+    }
+
+    .myInModal table {
+        /*border-collapse: separate;
+        border-spacing: 8px 4px;*/
+    }
+
+        .myInModal table th {
+            padding: 2px 0;
+            position: sticky;
+            top: -3px;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 0.87rem;
+        }
+/*Modal Tables */
+.customModal .table-wrap {
+    min-width: 1200px;
+}
+
+    .customModal .table-wrap thead {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+
+.customModal .table-hover tbody tr {
+    transition: background-color .2s ease;
+}
+
+    .customModal .table-hover tbody tr:hover {
+        box-shadow: none;
+    }
+
+.customModal .table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #f0f0f0;
+}
+
+.customModal .table-striped tbody tr:hover {
+    background-color: #ccc;
+}
+
+.customModal div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.5em;
+    color: #000;
+    font-family: 'Segoe Pro Regular';
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.customModal table.table-bordered.dataTable tbody th, .customModal table.table-bordered.dataTable tbody td {
+    color: #000;
+    font-family: 'Segoe Pro Regular';
+}
+
+.customModal .table-sm {
+    display: block;
+}
+
+.customModal .table-sm-dynamic-datatable {
+    overflow: unset !important
+}
+
+.customModal table.table-bordered.dataTable tbody td {
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+.customModal table.table-bordered.dataTable th {
+    font-weight: 500;
+    font-size: 0.85rem;
+    font-family: 'Segoe Pro Regular';
+    vertical-align: middle;
+}
+
+/*.customModal .table-bordered [class*=" bg-"] td, .table-bordered [class*=" bg-"] th, .customModal .table-bordered [class^="bg-"] td, .table-bordered [class^="bg-"] th {
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}*/
+
+.customModal .input-group-text, .customModal div.dataTables_wrapper div.dataTables_filter input {
+    height: 29px;
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+
+.customModal .table-sm th, .customModal .table-sm td {
+    padding: 3px 6px;
+    vertical-align: middle;
+}
+
+.customModal div.dataTables_wrapper div.dataTables_length select {
+    height: 29px;
+    padding-top: 4px;
+}
+
+.customModal table.table-bordered.dataTable th, table.table-bordered.dataTable td {
+    border-left-width: 0;
+}
+
+/*Recoveries_Left_Click*/
+#dt_scrl_Main_div th, #dt_scrl_Main_div td {
+    color: #000;
+    font-size: 0.87rem;
+}
+/*Client Analysis - Employee Profile*/
+#dt_clientAnalaysis th, #dt_clientAnalaysis td, #dt_DCClientAnalysisAgeing td, #dt_DCClientAnalysisAgeing th {
+    color: #000;
+    font-size: 0.87rem;
+}
+
+#scrl_lsdiv1 input, #scrl_lsdiv2 input, #scrl_lsdiv3 input, #scrl_rsdiv1 input, #scrl_rsdiv2 input, scrl_rsdiv3 input, #scrl_rsdiv4 input {
+    cursor: pointer;
+}
+
+.customStyle th, .customStyle td {
+    color: #000;
+    font-size: 0.87rem;
+}
+
+.pointer input {
+    cursor: pointer;
+}
+/*Client Analysis - Employee Profile*/
+.employee-table-left td, .employee-table-right td, .employee-fourth-row td, .employee-fifth-row td {
+    cursor: pointer;
+}
+
+.dataTables_wrapper .row {
+    margin: 0;
+}
+
+.dataTables_wrapper .col-sm-12 {
+    padding: 0;
+}
+
+.bg-secondary td, .bg-secondary {
+    font-family: system-ui !important;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+.multiselect .btn, .multiselect span {
+    color: #000;
+}

@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "GetWorkReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadBlock {
+    <link href="~/css/datagrid/datatables/datatables.bundle.css" rel="stylesheet" />
+    <link href="~/css/formplugins/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/css/datagrid/datatables/datatables.custom.css" rel="stylesheet" />
+}
+<div class="row">
+    <div class="col">
+        <div class="panel-hdr">
+            <h2>
+                Table <span class="fw-300"><i>Bordered</i></span>
+            </h2>
+            <div class="panel-toolbar">
+                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-container">
+                <div class="panel-content p-2">
+                    <!-- First Table -->
+                    <div id="dataList">
+                        <table id="dt_attendance" class="table table-bordered table-sm table-hover table-striped nowrap compact">
+                            <thead class="bg-primary-800" style="position:sticky;top:0; width:100%;">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date</th>
+                                    <th>Functionality on Screen </th>
+                                    <th>SideMenu</th>
+                                    <th>Module</th>
+                                    <th>Testing Status</th>
+                                    <th>Comment</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                <!-- Table rows go here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Second Table -->
+                    <div id="UserAttendanceList" class="table-responsive" style="display:none">
+                        <table id="dt_EmpAttendance" class="table table-bordered table-sm table-hover table-striped nowrap compact">
+                            <thead class="bg-primary-800" style="position:sticky;top:0; width:100%;">
+                                <tr>
+                                    <th></th>
+                                    <th>Day</th>
+                                    <th>Date</th>
+                                    <th>Reporting Time</th>
+                                    <th>In Time </th>
+                                    <th>Out Time</th>
+                                    <th>Hours</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                <!-- Table rows go here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ScriptsBlock{
+    <script src="~/js/typeahead/bootstrap3-typeahead.min.js"></script>
+    <script src="~/js/formplugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/js/formValidate/async.js"></script>
+    <script src="~/js/datagrid/datatables/datatables.bundle.js"></script>
+    <script src="~/js/dateRangeValidation.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            GetWorkReportData();
+            var heightwindow = $(document).height() - 400;
+            $('#dt_attendance,#dt_EmpAttendance').css('max-height', heightwindow + 'px');
+            $('#dt_attendance,#dt_EmpAttendance').css('min-height', heightwindow + 'px');
+        });
+
+        function GetWorkReportData() {
+            var url = '@Url.Action("GetWorkReport","WorkReport")'
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: 'json',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                success: function (data) {
+                    debugger;
+                    var row;
+                    var count=1;
+                    $("#dt_attendance tbody").empty();
+                    $.each(data, function (index, item) {
+                        row += '<tr">';
+                        row += '<td >' + count + '</td>';
+                        row += '<td >' + item.workingDate + '</td>';
+                        row += '<td >' + item.screenName + '</td>';
+                        row += '<td >' + item.sideMenu + '</td>';
+                        row += '<td >' + item.module + '</td>';
+                        row += '<td >' + item.testingStatus + '</td>';
+                        row += '<td >' + item.comment + '</td>';
+                        row += "</tr>";
+                        count++;
+                    });
+                    $('#dt_attendance tbody').html(row);
+                }
+            });
+        }
+    </script>
+}

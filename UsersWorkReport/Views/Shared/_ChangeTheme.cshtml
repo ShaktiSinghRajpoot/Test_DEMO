@@ -1,0 +1,37 @@
+﻿<script type="text/javascript">
+    function ModeChange() {
+        if ($('#EDarkMode').is(":checked")) {
+            ChangeThemeMode(1);
+        } else {
+            ChangeThemeMode(0);
+        }
+    }
+    function ChangeThemeMode(mode) {
+        $.ajax({
+            url: '@Url.Action("ChangeThemeMode", "Home", new { area ="" })',
+            type: "POST",
+            dataType: 'json',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            data: { mode: mode },
+            success: function (data) {
+                if (mode == '1') {
+                    document.body.classList.add('mod-skin-dark');
+                }
+                else {
+                    document.body.classList.remove('mod-skin-dark');
+                }
+            }
+        });
+    }
+    function ChangeMyColorTheme(path) {
+        $.ajax({
+            url: '@Url.Action("ChangeMyColorTheme", "Home", new { area ="" })',
+            type: "POST",
+            dataType: 'json',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            data: { path: path },
+            success: function () {
+            }
+        });
+    }
+</script>
